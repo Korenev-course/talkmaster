@@ -1,7 +1,4 @@
-import os
-
-# Re-run file creation for the updated Teletype-ready Markdown
-updated_md = """# TalkMaster — Телеграм‑бот для практики разговорного английского
+# TalkMaster — Телеграм‑бот для практики разговорного английского
 _Мгновенные диалоги на реальные темы и мягкие правки формулировок — прямо в Telegram._
 
 > Кейс: рабочий MVP‑бот на **Python** с **OpenAI Chat Completions**. Диалоги ведутся в чате Telegram; выбор сценариев — через **инлайн‑кнопки**. Исправления и короткие пояснения задаются через системные инструкции модели (см. `system_instruct.txt`).
@@ -98,13 +95,3 @@ _Подпись: Поток: Telegram → Bot (Python) → OpenAI Chat Completio
 
 —  
 _Автор: Денис._
-"""
-
-path = "/mnt/data/Кейс — TalkMaster (Teletype-ready, обновлено).md"
-base_dir = os.path.join(os.path.dirname(__file__), "doc")
-os.makedirs(base_dir, exist_ok=True)
-path = os.path.join(base_dir, "Кейс — TalkMaster (Teletype-ready, черновик).md")
-with open(path, "w", encoding="utf-8") as f:
-    f.write(updated_md)
-
-print(path)
